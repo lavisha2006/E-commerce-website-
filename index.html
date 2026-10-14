@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haath — Handmade by Local Artisans</title>
+<meta name="description" content="A marketplace for handmade goods, straight from the hands of local artisans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Announcement bar -->
+<div class="announce">Free shipping above ₹999 · Every order supports a local artisan family 🌿</div>
+
+<!-- Header -->
+<header class="nav" id="nav">
+  <a href="#home" class="logo">haath<span>.</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#crafts">Shop by craft</a>
+    <a href="#makers">Makers</a>
+    <a href="#map">Map</a>
+    <a href="#products">Shop</a>
+    <a href="#journal">Journal</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
+    <button class="icon-btn" id="wishBtn" aria-label="Wishlist">♡ <span class="badge" id="wishCount">0</span></button>
+    <button class="icon-btn" id="cartBtn" aria-label="Cart">🧺 <span class="badge" id="cartCount">0</span></button>
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="eyebrow">Handmade · Local · Honest</p>
+    <h1>Meet the <em>hands</em> behind it.</h1>
+    <p class="lead">Every pot, weave and carving here has a name, a town and a story. Buy directly from artisans — and keep craft alive.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-primary">Explore the shop</a>
+      <a href="#makers" class="btn btn-ghost">Meet our makers</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>240+</strong><span>Artisans</span></div>
+      <div><strong>38</strong><span>Villages</span></div>
+      <div><strong>100%</strong><span>Handmade</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="blob b1"><span>🏺</span></div>
+    <div class="blob b2"><span>🧶</span></div>
+    <div class="blob b3"><span>🪵</span></div>
+    <div class="hero-card">
+      <div class="avatar" style="background:var(--terra)">R</div>
+      <div><strong>Ramesh Kumar</strong><small>Potter · Khurja</small></div>
+      <button class="play" aria-label="Watch story">▶</button>
+    </div>
+    <div class="stamp">Made<br>by<br>hand</div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee"><div class="marquee-track">
+  <span>Pottery</span><span>✿</span><span>Weaving</span><span>✿</span><span>Woodwork</span><span>✿</span><span>Jewelry</span><span>✿</span><span>Leather</span><span>✿</span><span>Candles</span><span>✿</span>
+  <span>Pottery</span><span>✿</span><span>Weaving</span><span>✿</span><span>Woodwork</span><span>✿</span><span>Jewelry</span><span>✿</span><span>Leather</span><span>✿</span><span>Candles</span><span>✿</span>
+</div></div>
+
+<!-- Shop by craft -->
+<section class="section" id="crafts">
+  <div class="section-head reveal">
+    <p class="eyebrow">Shop by craft</p>
+    <h2>Six crafts, a thousand stories</h2>
+  </div>
+  <div class="craft-grid" id="craftGrid"></div>
+</section>
+
+<!-- Makers -->
+<section class="section tint" id="makers">
+  <div class="section-head reveal">
+    <p class="eyebrow">Meet the makers</p>
+    <h2>The people who make it all</h2>
+    <p class="sub">Tap a maker to read their story.</p>
+  </div>
+  <div class="carousel-wrap">
+    <button class="car-btn left" id="carL" aria-label="Previous">‹</button>
+    <div class="carousel" id="makerCarousel"></div>
+    <button class="car-btn right" id="carR" aria-label="Next">›</button>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="section" id="map">
+  <div class="section-head reveal">
+    <p class="eyebrow">Made close to home</p>
+    <h2>Find artisans near you</h2>
+  </div>
+  <div class="map-layout reveal">
+    <div class="map-box" id="mapBox">
+      <svg viewBox="0 0 600 420" class="map-svg" aria-hidden="true">
+        <path d="M70 90 C120 30 260 20 330 60 C420 40 520 80 540 160 C575 230 520 330 440 360 C360 400 230 390 150 350 C70 310 30 170 70 90 Z" class="land"/>
+        <path d="M110 150 C190 120 250 190 330 160 S450 190 500 150" class="river"/>
+        <path d="M130 270 C210 240 280 300 360 270 S470 290 510 260" class="river"/>
+      </svg>
+    </div>
+    <aside class="map-card" id="mapCard">
+      <p class="eyebrow">Select a pin</p>
+      <p>Click any marker to see the artisan and their shop.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- Featured collection -->
+<section class="collection" id="collection">
+  <div class="collection-inner reveal">
+    <p class="eyebrow light">Collection of the week</p>
+    <h2>Diwali Diyas &amp; Lights</h2>
+    <p>Hand-thrown diyas, scented candles and brass lamps — made for the festival of lights, made by hands that know the glow.</p>
+    <a href="#products" class="btn btn-light" data-filter="all">Shop the collection</a>
+    <div class="countdown" id="countdown"></div>
+  </div>
+  <div class="collection-art"><span>🪔</span><span>🕯️</span><span>✨</span></div>
+</section>
+
+<!-- Products -->
+<section class="section" id="products">
+  <div class="section-head reveal">
+    <p class="eyebrow">The shop</p>
+    <h2>Handpicked this week</h2>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- Impact -->
+<section class="impact">
+  <div class="reveal"><strong data-count="4820000" data-prefix="₹">0</strong><span>paid directly to artisans</span></div>
+  <div class="reveal"><strong data-count="240">0</strong><span>artisans on the platform</span></div>
+  <div class="reveal"><strong data-count="18500">0</strong><span>handmade pieces shipped</span></div>
+  <div class="reveal"><strong data-count="38">0</strong><span>villages supported</span></div>
+</section>
+
+<!-- Journal -->
+<section class="section" id="journal">
+  <div class="section-head reveal">
+    <p class="eyebrow">The journal</p>
+    <h2>Stories from the workshop</h2>
+  </div>
+  <div class="journal-grid">
+    <article class="post reveal"><div class="post-img g1">📖</div><small>Maker interview</small><h3>"Clay remembers every mistake" — a potter's 30 years</h3><a href="#">Read story →</a></article>
+    <article class="post reveal"><div class="post-img g2">🧵</div><small>Craft guide</small><h3>How to tell real handloom from powerloom</h3><a href="#">Read guide →</a></article>
+    <article class="post reveal"><div class="post-img g3">🪵</div><small>Behind the scenes</small><h3>One sheesham chair, 14 days, one carpenter</h3><a href="#">Watch process →</a></article>
+  </div>
+</section>
+
+<!-- Trust -->
+<section class="trust">
+  <div><span>✅</span><h4>Verified artisans</h4><p>Every maker is met and verified.</p></div>
+  <div><span>🎁</span><h4>Gift mode</h4><p>Handwritten notes, eco packaging.</p></div>
+  <div><span>🚚</span><h4>Honest shipping</h4><p>"Handmade in X days" on every piece.</p></div>
+  <div><span>↩️</span><h4>Easy returns</h4><p>7-day returns on ready-to-ship items.</p></div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div>
+    <a href="#home" class="logo light">haath<span>.</span></a>
+    <p>A marketplace for handmade goods, straight from local artisans.</p>
+  </div>
+  <div><h5>Shop</h5><a href="#crafts">Crafts</a><a href="#products">New arrivals</a><a href="#collection">Collections</a></div>
+  <div><h5>Community</h5><a href="#makers">Our makers</a><a href="#journal">Journal</a><a href="#">Sell with us</a></div>
+  <div class="newsletter-mini">
+    <h5>Stories in your inbox</h5>
+    <form class="nl-form" onsubmit="return false">
+      <input type="email" placeholder="you@email.com" aria-label="Email">
+      <button class="btn btn-primary" type="submit">Join</button>
+    </form>
+  </div>
+  <p class="copy">© 2026 Haath. Made with care.</p>
+</footer>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Cart drawer -->
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your basket</h3><button class="close" data-close>×</button></div>
+  <p class="support-note" id="supportNote"></p>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <label class="gift-toggle"><input type="checkbox" id="giftMode"> 🎁 This is a gift</label>
+    <textarea id="giftNote" placeholder="Write a handwritten-style note…" maxlength="140" hidden></textarea>
+    <div class="total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+    <button class="btn btn-primary block" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<!-- Wishlist drawer -->
+<aside class="drawer" id="wishDrawer" aria-label="Wishlist">
+  <div class="drawer-head"><h3>Saved for later</h3><button class="close" data-close>×</button></div>
+  <div class="drawer-body" id="wishItems"></div>
+</aside>
+
+<!-- Modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="close modal-close" data-close>×</button>
+  <div class="modal-body" id="modalBody"></div>
+</div>
+
+<!-- Search -->
+<div class="search-pop" id="searchPop">
+  <input type="search" id="searchInput" placeholder="Search pots, shawls, makers…">
+  <div id="searchResults"></div>
+</div>
+
+<!-- Newsletter popup -->
+<div class="nl-pop" id="nlPop">
+  <button class="close" data-nlclose>×</button>
+  <div class="nl-emoji">💌</div>
+  <h3>Get stories from our makers</h3>
+  <p>One letter a month — new artisans, festival picks, and 10% off your first order.</p>
+  <form class="nl-form" onsubmit="return false">
+    <input type="email" placeholder="you@email.com" aria-label="Email">
+    <button class="btn btn-primary" type="submit" id="nlSubmit">Subscribe</button>
+  </form>
+</div>
+
+<!-- Floating bubbles (bottom-right) -->
+<div class="bubbles">
+  <div class="app-panel" id="appPanel">
+    <button class="close" data-appclose>×</button>
+    <h4>Get the Haath app</h4>
+    <p>Follow makers, track orders &amp; get festival drops first.</p>
+    <div class="qr" aria-label="QR code placeholder"></div>
+    <a href="#" class="store">▶ Google Play</a>
+    <a href="#" class="store">  App Store</a>
+  </div>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <div class="avatar sm">H</div>
+      <div><strong>Haath Helper</strong><small>● Online</small></div>
+      <button class="close" data-chatclose>×</button>
+    </div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chips" id="chatChips"></div>
+    <form class="chat-input" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Ask about orders, makers, gifts…" autocomplete="off">
+      <button type="submit" aria-label="Send">➤</button>
+    </form>
+  </div>
+
+  <button class="bubble bubble-app" id="appBubble" aria-label="Download app">⬇<span class="tip">Download app</span></button>
+  <button class="bubble bubble-chat" id="chatBubble" aria-label="Open chat">💬<span class="dot"></span><span class="tip">Chat with us</span></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
